@@ -115,7 +115,171 @@ Console.Read();
 
 //YILDIZLARLA ŞEKİL OLUŞTURMA
 
-Console.Write("*****");
+//Console.Write("*****");
+/*
+for (int i =1; i <=10; i++ )
+{
+    Console.WriteLine("*");
+    Console.Writeline();
+    Console.WriteLine("*****")
+}
+
+Console.Read();
+
+*/
+
+// YILDIZLARLA DİK ÜÇGEN OLUŞTURMA
+/*
+for (int i = 1; i <=5; i++)
+{
+    for (int j =1; j <=i; j ++)     // j küçük eşit i önemli !!!
+    {
+        Console.Write("*");
+    }
+    Console.WriteLine("--*");
+}
+
+Console.Read();
+*/
+
+// HATA YÖNETİMİ TRY - CATCH - FINALLY - 
+/*
+try
+{
+
+    int sayi1, sayi2, sonuc;
+    Console.WriteLine("1. sayıyı giriniz: ");
+    sayi1 = Convert.ToInt16(Console.ReadLine());
+
+    Console.WriteLine("2. sayıyı giriniz: ");
+    sayi2 = Convert.ToInt16(Console.ReadLine());        //dönüşüm yapmayı unutma
+
+    sonuc = sayi1*sayi2;
+    Console.WriteLine("sayı 1ve sayı 2nin çarpımı: " + sonuc);
+    
+}
+
+catch       // hata vermeyecek aşağıdaki uyarıyıgösterecek!!
+{
+    Console.WriteLine("hata var kardeş");
+    
+}
+
+Console.Read();
+*/
+
+// exception dahil ediyorum!! ***
+/*
+try
+{
+
+    int sayi1, sayi2, sonuc;
+    Console.WriteLine("1. sayıyı giriniz: ");
+    sayi1 = Convert.ToInt16(Console.ReadLine());
+
+    Console.WriteLine("2. sayıyı giriniz: ");
+    sayi2 = Convert.ToInt16(Console.ReadLine());        //dönüşüm yapmayı unutma
+
+    sonuc = sayi1*sayi2;
+    Console.WriteLine("sayı 1ve sayı 2nin çarpımı: " + sonuc);
+    
+}
+
+catch(Exception ex)       // exception sınıfından ex isimli nesne türettim
+{
+    Console.WriteLine("hata var kardeş");
+    Console.WriteLine(ex);       //exception dan gelen hatayı burada yazdırmasını istiyorum
+    
+}
+
+Console.Read();
+*/
+
+// FORMAT EXCEPTION KONUSU YUKARIDAKİ ÖRNEĞİ KULLANIYORUM!!
+/*
+try
+{
+
+    int sayi1, sayi2, sonuc;
+    Console.WriteLine("1. sayıyı giriniz: ");
+    sayi1 = Convert.ToInt16(Console.ReadLine());
+
+    Console.WriteLine("2. sayıyı giriniz: ");
+    sayi2 = Convert.ToInt16(Console.ReadLine());        //dönüşüm yapmayı unutma
+
+    sonuc = sayi1*sayi2;
+    Console.WriteLine("sayı 1ve sayı 2nin çarpımı: " + sonuc);
+    
+}
+
+catch(FormatException)       // Format exception sadece değişken türü ile ilgili konularda çalışıyor diğer hata türlerinde alttaki mesajı göstermez!!!
+{
+    Console.WriteLine("Lütfen sadece sayısal değerler giriniz!");   // girilen değerler sayısal değerler olmazsa format exception çalışır!!!**
+        
+}
+
+Console.Read();
+*/
+
+// OVER FLOW EXCEPTION KONUSU 
+
+/*
+try
+{
+
+    int sayi1, sayi2, sonuc;
+    Console.WriteLine("1. sayıyı giriniz: ");
+    sayi1 = Convert.ToInt16(Console.ReadLine());
+
+    Console.WriteLine("2. sayıyı giriniz: ");
+    sayi2 = Convert.ToInt16(Console.ReadLine());        //dönüşüm yapmayı unutma
+
+    sonuc = sayi1*sayi2;
+    Console.WriteLine("sayı 1ve sayı 2nin çarpımı: " + sonuc);
+    
+}
+
+catch(FormatException)       // Format exception sadece değişken türü ile ilgili konularda çalışıyor diğer hata türlerinde alttaki mesajı göstermez!!!
+{
+    Console.WriteLine("Lütfen sadece sayısal değerler giriniz!");   // girilen değerler sayısal değerler olmazsa format exception çalışır!!!**
+        
+}
+catch(OverflowException)
+{
+    Console.WriteLine("lütfen belirli aralıklarda değer girin örnek INT16 aralığı!");   // iki farklı catch yapısı kullandım hataları azaltmak için 
+}
+
+Console.Read();
+
+*/
+
+// FINALLY KONUSU!!
+
+try
+{
+
+    int sayi1, sayi2, sonuc;
+    Console.WriteLine("1. sayıyı giriniz: ");
+    sayi1 = Convert.ToInt16(Console.ReadLine());
+
+    Console.WriteLine("2. sayıyı giriniz: ");
+    sayi2 = Convert.ToInt16(Console.ReadLine());        //dönüşüm yapmayı unutma
+
+    sonuc = sayi1*sayi2;
+    Console.WriteLine("sayı 1ve sayı 2nin çarpımı: " + sonuc);
+    
+}
+
+catch(Exception)       
+{
+    Console.WriteLine("Hata!");       
+}
+
+finally     // hata yakalanmasına rağmen finally bloğu çalışacak!!!
+{
+    Console.WriteLine("burası çalıştı!!");
+
+}
 
 Console.Read();
 
